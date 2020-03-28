@@ -1,6 +1,7 @@
 # ngolimi Glossary
 
 ngolimi glossary Web App
+Built with [Vue.js](https://vuejs.org/) and [Vuetify](https://vuetifyjs.com/)
 
 ## Project setup
 ```
