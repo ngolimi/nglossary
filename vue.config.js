@@ -5,7 +5,7 @@ module.exports = {
 
 	  pwa: {
     name: 'ngolimi Glossary',
-    themeColor: 'red',
+    themeColor: '#FFB700',
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
     workboxOptions: {

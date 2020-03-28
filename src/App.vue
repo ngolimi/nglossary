@@ -1,12 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar app color="red" dark flat >
-      <v-img alt="ngolimi Logo" class="shrink mr-2" contain src="@/assets/logo.png" transition="scale-transition" width="30" />
+    <v-app-bar app color="#FFB700" dark flat >
    <v-select
       v-model="value"
       :items="headers"
-      label="Languages"
       multiple
+      prepend-inner-icon="mdi-web" 
       hide-details 
       return-object
     >
@@ -20,7 +19,8 @@
         >(+{{ value.length - 7 }} others)</span>
       </template>
     </v-select>
-      <v-text-field v-model="search" clearable prepend-inner-icon="search" label="Search" single-line class="mx-3" hide-details flat @change="search"></v-text-field>
+      <v-text-field v-model="search" clearable prepend-inner-icon="search" 
+        single-line class="mx-3" hide-details flat @change="search"></v-text-field>
     </v-app-bar>
     <v-content>
     <v-hover
@@ -35,12 +35,13 @@
     </v-hover>
     </v-content>
     <v-row justify="center"> </v-row>
-    <v-footer color="red" dark app>
+    <v-footer color="#FFB700" dark app>
+      <v-img alt="ngolimi Logo" class="shrink mr-2" contain src="@/assets/logo.png" transition="scale-transition" width="30" />
      <span>&copy; 2020 ngolimi</span>
   <v-spacer></v-spacer>
    <v-dialog v-model="dialog" scrollable max-width="300px">
       <template v-slot:activator="{ on }">
-        <v-icon v-on="on">info</v-icon>
+        <v-icon v-on="on">mdi-help-circle</v-icon>
       </template>
       <v-card>
          <v-card-title>ngolimi glossary</v-card-title>
@@ -50,7 +51,8 @@
          Sample content from the COVID-19 glossary developed in this framework by Translators without Borders.
          </v-card-text>
         <v-card-actions>
-          <v-btn @click="dialog = false">Close</v-btn>
+          <v-spacer></v-spacer>
+          <v-btn color="#FFB700" dark @click="dialog = false"><v-icon v-on="on">mdi-close-thick</v-icon></v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
